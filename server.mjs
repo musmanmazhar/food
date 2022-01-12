@@ -164,7 +164,7 @@ const PlaceOrderIntentHandler = {
     console.log("dishName: ", dishName);
     console.log("qty: ", qty);
 
-  } catch error() {
+  } catch (error) {
  console.log("error code: ", error.response.status);
   }
   
