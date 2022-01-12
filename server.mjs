@@ -143,7 +143,7 @@ const EmailIntentHandler = {
     }
   }
 }
-
+try {
 const PlaceOrderIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -164,7 +164,10 @@ const PlaceOrderIntentHandler = {
     console.log("dishName: ", dishName);
     console.log("qty: ", qty);
 
-
+  } catch error() {
+ console.log("error code: ", error.response.status);
+  }
+  
 
 
 
